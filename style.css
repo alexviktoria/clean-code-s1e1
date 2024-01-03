@@ -5,6 +5,11 @@ body {
   font-family: lato, sans-serif;
 }
 
+h1,
+h2 {
+  display: none;
+}
+
 .aaa {
   width: 500px;
   margin: 0 auto;
@@ -49,7 +54,7 @@ ul {
 }
 
 li,
-h3 {
+h3{
   list-style: none;
 }
 
