@@ -5,69 +5,146 @@ body {
   font-family: lato, sans-serif;
 }
 
-h1,
-h2 {
+.header__title,
+.main__section-heading,
+.article__heading {
   display: none;
 }
 
-.aaa {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.aaa img {
+.header__image {
   width: 100%;
 }
 
-.aaa 
-.more_inf {
+.header__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
-  .aaa { 
+  .header { 
     text-align: center;
   }
 }
 
-.centered-main-page-element {
+.main__section {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
 
-.task {
-  width: 56%;
+.wrapper__new-item {
   display: inline-block;
   flex-grow: 1;
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 18px;
+  height: 21px;
+  padding: 0 9px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  color: #888;
+  width: 340px;
 }
 
-.task-row-wrapper {
-  display: flex;
+.wrapper__new-item:focus {
+  color: #333;
 }
 
-ul {
+.wrapper__button {
+  margin-top: 15px;
+}
+
+.article {
+  width: 450px;
+}
+
+.article__label {
+  display: block;
+  margin: 0 0 20px;
+  color: #333;
+  font-weight: 700;
+  font-size: 18px;
+  border-bottom: 2px solid #333;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.article__subheading {
+  color: #333;
+  font-weight: 700;
+  font-size: 18px;
+  border-bottom: 2px solid #333;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.article__list {
   margin: 0;
   padding: 0px;
 }
 
-li,
-h3{
+.article__list-item {
   list-style: none;
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
 }
 
-input,
-button{
+.article__checkbox {
+  margin: 0 10px;
+}
+
+.article__item-label {
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  width: 270px;
+}
+
+.article__item-input {
+  width: 270px;
+  display: none;
   outline: none;
+}
+
+.article__item-input:focus {
+  color: #333;
+}
+
+/* Edit Task */
+
+.article__item-input--edit-mode {
+  width: 270px; 
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  color: #888;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.article__item-label--edit-mode {
+  display: none;
 }
 
 button {
   background: none;
   border: 0px;
   color: #888;
-  font-size: 15px;
+  font-size: 18px;
   width: 60px;
   font-family: lato, sans-serif;
   cursor: pointer;
@@ -77,105 +154,20 @@ button:hover {
   color: #3a3a3a;
 }
 
-/* Heading */
 
-h3,
-label[for="new-task"] {
-  color: #333;
-  font-weight: 700;
-  font-size: 15px;
-  border-bottom: 2px solid #333;
-  padding: 30px 0 10px;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-input[type="text"] {
-  margin: 0;
-  font-size: 18px;
-  line-height: 18px;
-  height: 21px;
-  padding: 0 9px;
-  border: 1px solid #ddd;
-  background: #fff;
-  border-radius: 6px;
-  font-family: lato, sans-serif;
-  color: #888;
-}
-
-input[type="text"]:focus {
-  color: #333;
-}
-
-/* New Task */
-
-label[for="new-task"] {
-  display: block;
-  margin: 0 0 20px;
-}
-
-input#new-task {
-  width: 318px;
-}
-
-/* Task list */
-
-li {
-  overflow: hidden;
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-li > * {
-  vertical-align: middle;
-}
-
-li > input[type="checkbox"] {
-  margin: 0 10px;
-}
-
-li > label {
-  padding-left: 10px;
-  box-sizing: border-box;
-  font-size: 18px;
-  width: 226px;
-}
-
-li > input[type="text"] {
-  width: 226px;
-}
-
-button.delete img {
+.article__delete-button img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.article__delete-button img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
 
-ul#completed-tasks label {
+.article__item-label--completed {
   text-decoration: line-through;
   color: #888;
-}
-
-/* Edit Task */
-
-ul li input[type=text] {
-  display: none;
-}
-
-ul li.editMode input[type=text] {
-  display: inline-block;
-  width: 224px;
-}
-
-ul li.editMode label {
-  display: none;
 }
